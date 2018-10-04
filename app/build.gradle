@@ -4,12 +4,15 @@ android {
     compileSdkVersion 24
     buildToolsVersion "24.0.2"
     defaultConfig {
-        applicationId "com.ximsfei.gallery2"
+//        applicationId "com.ximsfei.gallery2"
+        applicationId "com.android.gallery3d"
+
         minSdkVersion 14
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
-
+//        versionCode 1
+//        versionName "1.0"
+        versionCode 40030
+        versionName "1.1.40030"
         renderscriptTargetApi 19
 //        renderscriptSupportModeEnabled true
     }
@@ -27,6 +30,27 @@ android {
         }
     }
     useLibrary 'org.apache.http.legacy'
+
+    signingConfigs {
+        release {
+            storeFile file('debug.jks')
+            storePassword '123456'
+            keyAlias 'debugkey'
+            keyPassword '123456'
+        }
+        debug {
+            storeFile file('debug.jks')
+            storePassword '123456'
+            keyAlias 'debugkey'
+            keyPassword '123456'
+        }
+//        debug {
+//            storeFile file('testkey.jks')
+//            storePassword '123456'
+//            keyAlias 'testkey'
+//            keyPassword '123456'
+//        }
+    }
 }
 
 dependencies {
